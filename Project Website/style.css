@@ -1,0 +1,99 @@
+
+body {
+    background-color: #fcfdff;
+    margin: 0;
+    padding: 0;
+}
+
+li, a {
+    font-family: Verdana;
+    font-weight: 50;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background: #2f3247;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+nav a{
+    padding: 5px 10px
+}
+
+.btn a:hover{
+    background-color: white;
+    color: #2f3247;
+}
+
+#heading {
+    float: left;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #edf0f1;
+}
+
+#member {
+    text-align: center; 
+    margin: 50px;
+    padding: auto 10px;
+}
+
+.parent{
+    display: inline-block;
+    background: #ccc;
+    border-radius: 7px;
+    box-shadow: 5px 10px 20px #cccdcf; 
+    width: 40%;
+    min-width: 260px;
+    margin: 20px;
+    padding: 10px;  
+}
+
+.container{
+    position: relative;
+    text-align: left;
+    float: left;
+    width: 60%;
+    min-width: 250px;
+}
+
+#member p{
+    float: left;
+    clear: right;
+    font-family: Verdana;
+    position: relative;
+}
+
+.memberPhoto {
+    float: left;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 900;
+}
+
+.selected a{
+    background-color:white;
+    color: #2f3247;
+}
