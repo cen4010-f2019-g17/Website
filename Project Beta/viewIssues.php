@@ -10,8 +10,9 @@
     
     <body>
        <div class="text-center">
-            <h1 class="title">Report</h1>
+            <h1 class="title">Issues</h1>
             <p>View all current issues on campus</p>
+            <a href="report.html">Report an issue</a>
         </div>
         
         <table>
@@ -21,7 +22,32 @@
                 <th>Status</th>
             </tr>
             <?php
-            $mysqli = neq mysqli("localhost", " cen4010fal19_g17", " cen4010fal19_g17")
+            
+            $servername = "https://lamp.cse.fau.edu/phpMyAdmin/index.php";
+            $username = "cen4010fal19_g17";
+            $password = "p3MeukoGdT";
+            $dbname = "cen4010fal19_g17";
+            
+            
+            $conn = mysqli_connect("localhost", $username, $password, $dbname);
+            if($conn-> connect_error){
+                die("Connection failed: ". $conn->connect_error);
+            }
+            
+            $sql = "SELECT Location, Description, Status from campusSnapshot_Issues";
+            $result = $conn-> query($sql);
+            
+            if($result -> num_rows > 0){
+                while($row = $result -> fetch_assoc()){
+                    echo "<tr><td>". $row["Location"] ."</td><td>". $row["Description"] ."</td><td>". $row["Status"] ."</td></tr>";
+                }
+            }
+            else {
+                echo "0 result";
+            }
+            
+            $conn-> close();
+            ?>
         </table>
     </body> 
 </html>
