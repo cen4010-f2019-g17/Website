@@ -1,0 +1,10 @@
+.title {
+    font-weight: bolder;
+    font-size:2em;
+    color: red;
+}
+
+.description-input {
+    height: 150px;
+    length: 100px;
+}
